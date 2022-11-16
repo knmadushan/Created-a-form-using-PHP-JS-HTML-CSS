@@ -1,0 +1,256 @@
+<html>
+<title>Travel Agency</title>
+<head>
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.h2 {
+padding:1px 10px;
+background-color:#A74AC7;
+color:white;
+border-radius: 4px}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+.form{
+	align :center;
+	padding :20px;
+
+}
+.boxsize{
+width : 200px;
+height:30px;
+
+border-radius:5px;
+border-color:black;
+
+}
+.container {
+	width: 600px;
+	background: #f2f2f2;
+	margin:4px auto;
+	height:90%;
+	border-radius:8px;
+	border-color:black;
+}
+
+.button {
+  background-color: black; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:4px;
+  float:right;
+}
+
+.button1 {
+padding: 10px 24px;}
+
+</style>
+</head>
+
+<body>
+<div class ="container">
+<form class = "form" action="form.php" method="POST">
+<div class="h2">
+<h2>Travel Details</h2></div></br></br>
+<lable>Travel Date</lable><br>
+<input type = "date" class ="boxsize" name ="date" >
+<br><br>
+<lable>Destination</lable><br>
+<input type = "text" class ="boxsize" name ="Desti">
+<br><br>
+
+<lable>Realistic Budget $</lable><br>
+<input type = "text" placeholder="$" class ="boxsize" name ="RBudget">
+<br><br>
+
+<lable>From which airport would you like to leave from?
+</lable><br>
+<select  class ="boxsize" name="drop">
+<option>Pleace select</option>
+<option>katunayaka</option>
+<option>Mattala</option>
+ </select>
+ <br>
+ <br>
+ 
+ 
+ <lable>Type of Trip </lable>
+ <br>
+ <br>
+ 
+ <table border="0">
+ <tr>
+ <td><label class="switch" >
+  <input type="checkbox" name="t1" value="Honymoon">
+  <span class="slider round"></span>
+</label></td>
+<td> <lable>Honymoon</lable></td>
+<td><label class="switch">
+  <input type="checkbox" name="t2" value="Getaway">
+  <span class="slider round"></span>
+</label></td>
+<td>Getaway</td>
+</tr> 
+
+ <tr>
+ <td><label class="switch" >
+  <input type="checkbox" name="t3" value="Business" value="Business">
+  <span class="slider round"></span>
+</label></td>
+<td> <lable>Business</lable></td>
+<td><label class="switch">
+  <input type="checkbox" name="t4"  value="Family Vacation">
+  <span class="slider round"></span>
+</label></td>
+<td>Family Vacation</td>
+</tr>
+
+
+ <tr>
+ <td><label class="switch">
+  <input type="checkbox" name="t5" value="Other">
+  <span class="slider round"></span>
+</label></td>
+<td> <lable>Cruise</lable></td>
+<td><label class="switch">
+  <input type="checkbox" name="t6" value="Other">
+  <span class="slider round"></span>
+</label></td>
+<td>Other</td>
+</tr>
+
+<tr height ="30px" ><td colspan = "4"></td></tr>
+
+
+<tr>
+<td colspan = "4">Other Service Needed</td>
+</tr> 
+
+<tr>
+ <td><label class="switch">
+  <input type="checkbox" name="s1" value="Flights Only">
+  <span class="slider round"></span>
+</label></td>
+<td> <lable>Flights Only</lable></td>
+<td><label class="switch">
+  <input type="checkbox" name="s2" value="Rent Car">
+  <span class="slider round"></span>
+</label></td>
+<td>Rent Car</td>
+</tr>
+<tr>
+ <td><label class="switch">
+  <input type="checkbox" name="s3" value="Hotel/Resorts">
+  <span class="slider round"></span>
+</label></td>
+<td> <lable>Hotel/Resorts</lable></td>
+<td><label class="switch">
+  <input type="checkbox" name="s4" value="Entertainment">
+  <span class="slider round"></span>
+</label></td>
+<td>Entertainment</td>
+</tr>
+
+<tr height ="30px" ><td colspan = "4"></td></tr>
+
+<tr>
+<td colspan = "4">Agent Retainer Fee </td>
+</tr>
+</table>
+<br>
+<table>
+ <tr>
+ <td><input type="radio" ></td>
+<td> <img src ="1@.png" height ="50px" width ="50px"></td>
+<td>Travel Agent Non-Refoundable retainer fee </td>
+<td>  $100</td>
+</tr>
+ 
+ <tr>
+ <td></td>
+ <td></td>
+ <td>
+ Quantity 
+ <select>
+ <option>1</option>
+ <option>2</option>
+ <option>3</option>
+ </select>
+ </td>
+ <td>
+
+ </td>
+ 
+ </tr>
+ </table>
+<button class="button button1">SUBMIT</button>
+</form>
+</div>
+</body>
+
+</html
